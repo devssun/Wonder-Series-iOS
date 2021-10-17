@@ -11,4 +11,4 @@
 | Topic | 블로그 링크 | 예제 |
 |----------|--------|--------|
 |SceneDelegate|[App Switcher - 앱 화면 가리기](https://hyesunzzang.tistory.com/234)|[예제](AppSwitcherTest)|
-|Motion Event|[흔들어서 QR체크인 실행하기 파헤쳐보기](https://hyesunzzang.tistory.com/)|[예제](ShakeTest)|
+|Motion Event|[흔들어서 QR체크인 실행하기 파헤쳐보기](https://hyesunzzang.tistory.com/249)|[예제](ShakeTest)|
