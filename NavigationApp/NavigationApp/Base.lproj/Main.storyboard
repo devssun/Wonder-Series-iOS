@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NavigationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aH4-q2-0Cz">
+                                <rect key="frame" x="0.0" y="44" width="414" height="539"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fl2-vu-FY1">
+                                <rect key="frame" x="0.0" y="802" width="414" height="40"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="tst-Bc-A2S"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="마커 꽂기">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="touchedAddMarkerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cpw-SZ-lLB"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="WZz-Ng-gRP">
+                                <rect key="frame" x="20" y="751" width="374" height="32"/>
+                                <segments>
+                                    <segment title="기록 시작"/>
+                                    <segment title="기록 중지"/>
+                                    <segment title="기록 삭제"/>
+                                </segments>
+                                <connections>
+                                    <action selector="touchedSegmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="KjC-Om-c8g"/>
+                                </connections>
+                            </segmentedControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7ZF-Mb-9Vd">
+                                <rect key="frame" x="20" y="603" width="374" height="128"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="l7F-Xr-Ks6"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WZz-Ng-gRP" firstAttribute="top" secondItem="7ZF-Mb-9Vd" secondAttribute="bottom" constant="20" id="67n-rp-HAq"/>
+                            <constraint firstItem="Fl2-vu-FY1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6OG-9E-UUP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fl2-vu-FY1" secondAttribute="trailing" id="CxX-9c-puZ"/>
+                            <constraint firstItem="aH4-q2-0Cz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FLE-hS-2Zw"/>
+                            <constraint firstItem="aH4-q2-0Cz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FQ0-Ox-GWZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WZz-Ng-gRP" secondAttribute="trailing" constant="20" id="WWh-Nx-dMe"/>
+                            <constraint firstItem="7ZF-Mb-9Vd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eKn-YH-cQF"/>
+                            <constraint firstItem="Fl2-vu-FY1" firstAttribute="top" secondItem="WZz-Ng-gRP" secondAttribute="bottom" constant="20" id="fsu-W9-Byo"/>
+                            <constraint firstItem="WZz-Ng-gRP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lIk-cT-Ku8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aH4-q2-0Cz" secondAttribute="trailing" id="oXx-hP-QYe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Fl2-vu-FY1" secondAttribute="bottom" constant="20" id="qne-o6-ciX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7ZF-Mb-9Vd" secondAttribute="trailing" constant="20" id="wep-10-Dli"/>
+                            <constraint firstItem="7ZF-Mb-9Vd" firstAttribute="top" secondItem="aH4-q2-0Cz" secondAttribute="bottom" constant="20" id="z4k-nK-fQI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addMarkerButton" destination="Fl2-vu-FY1" id="8LE-cN-P6y"/>
+                        <outlet property="mapView" destination="aH4-q2-0Cz" id="2zh-Rm-yQS"/>
+                        <outlet property="segmentedControl" destination="WZz-Ng-gRP" id="3HE-Ro-NXc"/>
+                        <outlet property="textView" destination="7ZF-Mb-9Vd" id="5ZO-lS-nY8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="115.94202898550725" y="79.6875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
