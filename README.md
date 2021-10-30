@@ -12,3 +12,4 @@
 |----------|--------|--------|
 |SceneDelegate|[App Switcher - 앱 화면 가리기](https://hyesunzzang.tistory.com/234)|[예제](AppSwitcherTest)|
 |Motion Event|[흔들어서 QR체크인 실행하기 파헤쳐보기](https://hyesunzzang.tistory.com/249)|[예제](ShakeTest)|
+|Location Service|[백그라운드에 있을 때 위치 이벤트 처리하기](https://hyesunzzang.tistory.com/257)|[예제](NavigationApp)|
